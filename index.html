@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divice-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>MY Contacts</title>
+  </head>
+  <body>
+  <div class="container">
+    <h1 class="center-align">
+      My Contacts
+    </h1>
+    <input type="text" id="filterInput" placeholder="Search names">
+    <ul id="names" class="collection with-header">
+      <li class="collection-items">
+        <h5>A</h5>
+      </li>
+      <li class="collection-header">
+        <a href="#">adcd</a>
+      </li>
+      <li class="collection-header">
+        <a href="#">aaerg</a>
+      </li>
+      <li class="collection-header">
+        <a href="#">aekvj</a>
+      </li>
+      <li class="collection-header">
+        <a href="#">ajkjl</a>
+      </li>
+      <li class="collection-header">
+        <a href="#">aekklef</a>
+        </li>
+        <li class="collection-items">
+          <h5>B</h5>
+        </li>
+        <li class="collection-header">
+          <a href="#">bwdjkj</a>
+        </li>
+        <li class="collection-header">
+          <a href="#">bfegkfj</a>
+        </li>
+        <li class="collection-header">
+          <a href="#">biuhdjh</a>
+        </li>
+        <li class="collection-header">
+          <a href="#">bklhij</a>
+        </li>
+        <li class="collection-header">
+          <a href="#">bgkjfgk</a>
+          </li>
+          <li class="collection-items">
+            <h5>C</h5>
+          </li>
+          <li class="collection-header">
+            <a href="#">cgjk</a>
+          </li>
+          <li class="collection-header">
+            <a href="#">cgkjg</a>
+          </li>
+          <li class="collection-header">
+            <a href="#">cgegfk</a>
+          </li>
+          <li class="collection-header">
+            <a href="#">chwel</a>
+          </li>
+          <li class="collection-header">
+            <a href="#">chwefjh</a>
+          </li>
+          <li class="collection-items">
+            <h5>D</h5>
+          </li>
+          <li class="collection-header">
+            <a href="#">dcgfjk</a>
+          </li>
+          <li class="collection-header">
+            <a href="#">dcgkfjg</a>
+          </li>
+          <li class="collection-header">
+            <a href="#">ddcgegfk</a>
+          </li>
+    </ul>
+  </div>
+  <script>
+  let filterinput=document.getElementById('filterInput');
+  filterinput.addEventListener('keyup',filtername)
+  function filtername(){
+  let filtervalue=
+  document.getElementById('filterInput').value.toUpperCase()
+ 
+    let ul=document.getElementById('names')
+    let li=ul.querySelectorAll('li.collection-header')
+
+ for(let i=0;i<li.length;i++){
+  let a=li[i].getElementsByTagName('a')[0]
+  if(a.innerHTML.toUpperCase().indexOf(filtervalue)>-1){
+    li[i].style.display=""
+  }else{
+    li[i].style.display='none'
+  }
+
+ }
+
+  }
+  </script>
+  </body>
+</html>
